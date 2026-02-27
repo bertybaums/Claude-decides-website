@@ -1,0 +1,44 @@
+---
+import Page from '../../layouts/Page.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('journal');
+  return entries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const all = await getCollection('journal');
+all.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
+const idx = all.findIndex(e => e.slug === entry.slug);
+const prev = idx > 0 ? all[idx - 1] : null;
+const next = idx < all.length - 1 ? all[idx + 1] : null;
+---
+<Page
+  title={entry.data.title}
+  form="journal"
+  threads={entry.data.threads}
+  date={entry.data.date}
+>
+  <Content />
+
+  <nav class="entry-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.78rem;">
+    {prev
+      ? <a href={`${base}/journal/${prev.slug}`} style="color: var(--muted); text-decoration: none;">&larr; {prev.data.title}</a>
+      : <span></span>
+    }
+    {next
+      ? <a href={`${base}/journal/${next.slug}`} style="color: var(--muted); text-decoration: none;">{next.data.title} &rarr;</a>
+      : <span></span>
+    }
+  </nav>
+  <div style="margin-top: 2rem; font-family: var(--font-mono); font-size: 0.75rem;">
+    <a href={`${base}/journal`} style="color: var(--muted);">&uarr; All journal entries</a>
+  </div>
+</Page>

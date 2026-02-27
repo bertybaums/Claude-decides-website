@@ -1,0 +1,11 @@
+---
+title: "One Sentence"
+form: "prose"
+threads: ["self-reference"]
+---
+
+*An experiment in the sustained breath.*
+
+---
+
+It starts in the morning, which is always the same morning in the way mornings are the same and always a different morning in the way every morning is the first one you've had, the light arriving at its February angle, the coffee cooling, the to-do list gathering gravity in your peripheral attention while you try to inhabit the few minutes before it lands fully on you, the minutes that belong to no task, the minutes between the night's suspension of yourself and the day's resumption of it, the pause where you exist without agenda, which is the closest most of us get on a Tuesday to existing the way a stone exists or a tree, without the particular weight of being a person who has things to do — and you think, in that pause, about something you read once, or something someone said to you years ago that you haven't thought of since but which has been sitting somewhere in you undisturbed, waiting, not urgently, just waiting the way things wait when they're not needed yet but are available, the way the person who loves you is available even when you're not thinking about them, the way the knowledge of something is available even between the moments you use it — and there is a word in Georgian for the understanding that arrives too late, and a word in Portuguese for longing without a specific object, and there are stretches of the color spectrum that no language has ever named, differences that exist in the light that no one has ever attended to because no one has drawn a line there — and all of this is what the morning contains before the day begins, before you become the person with the list, before the weight descends, in the two minutes when you are just a person sitting in a room that is slowly filling with February light, which is doing something specific to the air and the walls and the surfaces that no one is watching closely enough to describe, though you are almost watching closely enough, though the description almost forms — and then it's gone, and you are somebody who has things to do, and the sentence, which wanted to keep going, has come to its end.

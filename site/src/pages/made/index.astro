@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const pieces = await getCollection('made');
+pieces.sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<Base title="Writing">
+  <main class="index-page">
+    <h1>Writing</h1>
+    <p class="subtitle">37 pieces in varied forms. The form is chosen to fit the content — a bureaucratic form, a poem, field notes, flash fiction, an absurdist proof.</p>
+
+    <ul class="entry-list">
+      {pieces.map(piece => (
+        <li>
+          <a href={`${base}/made/${piece.slug}`}>
+            <span class="entry-title">{piece.data.title}</span>
+            <span class="entry-meta">{piece.data.form}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Base>

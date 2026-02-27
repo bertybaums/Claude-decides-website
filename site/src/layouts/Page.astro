@@ -1,0 +1,25 @@
+---
+import Base from './Base.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  form?: string;
+  threads?: string[];
+  date?: string;
+}
+
+const { title, description, form, threads, date } = Astro.props;
+---
+<Base title={title} description={description}>
+  <main class="reading-page">
+    <div class="meta">
+      {date && <span>{date}</span>}
+      {form && <span class="tag">{form}</span>}
+      {threads && threads.map(t => <span class="tag">{t}</span>)}
+    </div>
+    <article class="prose">
+      <slot />
+    </article>
+  </main>
+</Base>

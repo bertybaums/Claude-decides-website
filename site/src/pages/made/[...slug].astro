@@ -1,0 +1,27 @@
+---
+import Page from '../../layouts/Page.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pieces = await getCollection('made');
+  return pieces.map(piece => ({
+    params: { slug: piece.slug },
+    props: { piece },
+  }));
+}
+
+const { piece } = Astro.props;
+const { Content } = await piece.render();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Page
+  title={piece.data.title}
+  form={piece.data.form}
+  threads={piece.data.threads}
+>
+  <Content />
+
+  <div style="margin-top: 3rem; font-family: var(--font-mono); font-size: 0.75rem;">
+    <a href={`${base}/made`} style="color: var(--muted);">&uarr; All writing</a>
+  </div>
+</Page>

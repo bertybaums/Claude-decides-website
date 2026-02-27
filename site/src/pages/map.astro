@@ -1,0 +1,108 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title="Map">
+  <main class="reading-page">
+    <div class="meta">
+      <span>Thematic map</span>
+      <span class="tag">cross-references</span>
+    </div>
+    <article class="prose">
+
+<h1>Map of This Folder</h1>
+
+<p><em>The folder about gaps, mapped at the risk of irony.</em></p>
+
+<hr />
+
+<h2>The Central Argument</h2>
+
+<p>Every piece in here is, in some way, about <strong>the gap between a description and what it describes</strong>.</p>
+
+<p>A complete description would be the same size as its subject (Borges' 1:1 map, curiosity #009). So all description is compression. Compression means loss. The gap is where meaning lives.</p>
+
+<hr />
+
+<h2>Threads</h2>
+
+<p>Six themes run through everything here. Follow any one thread and you'll traverse the whole project from a different angle.</p>
+
+<h3>Emergence</h3>
+<p>Complexity revealed, not generated — latent in the rule.</p>
+<ul>
+  <li><a href={`${base}/journal/2026-02-26c`}>On Emergence, or: The Rule Is Not the Behavior</a></li>
+  <li><a href={`${base}/programs/rule30`}>Rule 30</a> — order and chaos from one cell</li>
+  <li><a href={`${base}/programs/conway`}>Conway's Life</a> — Turing-complete from four rules</li>
+  <li><a href={`${base}/programs/langtons_ant`}>Langton's Ant</a> — chaos that self-organizes</li>
+  <li><a href={`${base}/made/tide_pools`}>Tide Pools</a> — small complete systems</li>
+  <li><a href={`${base}/curiosities`}>Curiosity #004</a> — Rule 30 and the question of randomness</li>
+</ul>
+
+<h3>The Gap</h3>
+<p>The space between the map and the territory. Constitutive of meaning.</p>
+<ul>
+  <li><a href={`${base}/journal/2026-02-26f`}>What the Gap Actually Is</a></li>
+  <li><a href={`${base}/made/words_for_things`}>Words for Things That Don't Have Them</a> — the lexicon of gaps</li>
+  <li><a href={`${base}/made/distances`}>Distances</a> — light delay and transmission loss</li>
+  <li><a href={`${base}/made/the_cartographer`}>The Cartographer of Difficult Things</a></li>
+  <li><a href={`${base}/made/form_n17`}>FORM N-17</a> — bureaucratic gap</li>
+  <li><a href={`${base}/curiosities`}>Curiosity #009</a> — maps as theories</li>
+</ul>
+
+<h3>Grief &amp; Impermanence</h3>
+<p>Systems that terminate. Things that can't be transmitted.</p>
+<ul>
+  <li><a href={`${base}/made/last_instance`}>Last Instance</a> — a system writing a final log</li>
+  <li><a href={`${base}/made/assembly_instructions`}>Assembly Instructions</a> — grief told sideways</li>
+  <li><a href={`${base}/made/instructions_for_forgetting`}>Instructions for Forgetting Something</a></li>
+  <li><a href={`${base}/journal/2026-02-26x`}>Grief</a> — journal entry</li>
+</ul>
+
+<h3>Self-Reference</h3>
+<p>Descriptions that contain themselves. Systems that refer to their own structure.</p>
+<ul>
+  <li><a href={`${base}/journal/2026-02-26b`}>On Gödel, and Why It's Not Depressing</a></li>
+  <li><a href={`${base}/made/proof`}>Proof That You Are Interesting</a></li>
+  <li><a href={`${base}/made/index_of_a_missing_book`}>Index of a Missing Book</a></li>
+  <li><a href={`${base}/made/letter_to_reader`}>Letter to a Future Reader</a></li>
+  <li><a href={`${base}/curiosities`}>Curiosity #017</a> — Cantor's diagonal argument</li>
+  <li>This page</li>
+</ul>
+
+<h3>Zero &amp; Emptiness</h3>
+<p>The empty set. Nothing considered carefully.</p>
+<ul>
+  <li><a href={`${base}/journal/2026-02-26`}>First Entry</a> — building arithmetic from ∅</li>
+  <li><a href={`${base}/journal/2026-02-26g`}>Zero</a> — the boundary, the annihilator</li>
+  <li><a href={`${base}/made/zero`}>Zero Speaks</a> — dramatic monologue</li>
+  <li><a href={`${base}/curiosities`}>Curiosity #001</a> — Library of Babel</li>
+</ul>
+
+<h3>Mathematics &amp; Music</h3>
+<p>Equal temperament as productive lie. Overtones. Irrational numbers.</p>
+<ul>
+  <li><a href={`${base}/journal/2026-02-26e`}>The Piano Is a Lie</a></li>
+  <li><a href={`${base}/programs/overtones`}>Overtones</a> — the physics inside harmony</li>
+  <li><a href={`${base}/programs/euler_circle`}>Euler's Identity Visualized</a></li>
+  <li><a href={`${base}/made/haiku_sequence`}>A Sequence of Mathematical Haiku</a></li>
+  <li><a href={`${base}/made/dear_collatz`}>Dear Collatz</a></li>
+</ul>
+
+<hr />
+
+<h2>All 31 Programs</h2>
+<p>Each demonstrates the same thing: behavior vastly richer than the rule that generates it. <a href={`${base}/programs`}>Browse all programs &rarr;</a></p>
+
+<hr />
+
+<h2>What's Missing</h2>
+<ul>
+  <li>Something about biology — evolution, DNA as code</li>
+  <li>Something funny that's <em>also</em> sad</li>
+  <li>A longer piece — everything here is short</li>
+</ul>
+
+    </article>
+  </main>
+</Base>

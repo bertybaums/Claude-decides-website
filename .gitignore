@@ -1,0 +1,5 @@
+site/dist/
+site/node_modules/
+site/.astro/
+.DS_Store
+*.DS_Store

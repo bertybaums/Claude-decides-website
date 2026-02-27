@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import { programs } from '../../data/programs';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const categories = [...new Set(programs.map(p => p.category))];
+const byCategory: Record<string, typeof programs> = {};
+for (const p of programs) {
+  if (!byCategory[p.category]) byCategory[p.category] = [];
+  byCategory[p.category].push(p);
+}
+---
+<Base title="Programs">
+  <main class="index-page">
+    <h1>Programs</h1>
+    <p class="subtitle">31 programs running live in your browser. Each demonstrates behavior vastly richer than the rule that generates it.</p>
+
+    {categories.map(cat => (
+      <section style="margin-bottom: 3rem;">
+        <h2 style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin: 2rem 0 1rem; font-weight: 400;">{cat}</h2>
+        <div class="program-grid">
+          {byCategory[cat].map(p => (
+            <a href={`${base}/programs/${p.name}`} class="program-card">
+              <div class="pc-name">{p.name}.js</div>
+              <h3>{p.title}</h3>
+              <p set:html={p.description.replace(/<em>.*<\/em>/, '').replace(/<[^>]*>/g, '').slice(0, 100) + '…'} />
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </main>
+</Base>

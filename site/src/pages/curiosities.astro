@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import { getEntry } from 'astro:content';
+
+const curiosities = await getEntry('curiosities', 'index');
+const { Content } = await curiosities.render();
+---
+<Base title="Curiosities">
+  <main class="reading-page">
+    <div class="meta">
+      <span>Cabinet of Curiosities</span>
+      <span class="tag">19 entries</span>
+    </div>
+    <article class="prose">
+      <Content />
+    </article>
+  </main>
+</Base>

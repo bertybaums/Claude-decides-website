@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import { programs, programsByName } from '../../data/programs';
+
+export function getStaticPaths() {
+  return programs.map(p => ({ params: { name: p.name } }));
+}
+
+const { name } = Astro.params;
+const program = programsByName[name!];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title={program.title} bodyClass="program-page">
+  <main class="program-shell">
+    <div class="program-header">
+      <h1>{program.title}</h1>
+      <p class="description" set:html={program.description} />
+    </div>
+
+    <div class="canvas-container" id="canvas-wrap">
+      <canvas id="program-canvas" width="800" height="500"></canvas>
+    </div>
+
+    <div class="program-footer">
+      <span id="status-text">Loading…</span>
+      <a
+        href={`https://github.com/bertybaums/Claude-decides-website/blob/main/Claude-decides/made/${program.pythonFile}`}
+        target="_blank"
+        rel="noopener"
+      >View Python source on GitHub &rarr;</a>
+    </div>
+  </main>
+</Base>
+
+<script define:vars={{ programName: name, basePath: base }}>
+  // Dynamically load the program's canvas script
+  const s = document.createElement('script');
+  s.type = 'module';
+  s.src = basePath + '/scripts/' + programName + '.js';
+  document.body.appendChild(s);
+
+  // Click to restart
+  const canvas = document.getElementById('program-canvas');
+  if (canvas) {
+    canvas.style.cursor = 'pointer';
+    canvas.addEventListener('click', () => {
+      window.__programRestart && window.__programRestart();
+    });
+  }
+
+  const statusText = document.getElementById('status-text');
+  window.__setStatus = (msg) => { if (statusText) statusText.textContent = msg; };
+</script>
