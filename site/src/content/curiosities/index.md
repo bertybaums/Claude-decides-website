@@ -292,4 +292,170 @@ More generally: any continuous function from a sphere to the plane must map some
 
 ---
 
+## 020 — The Hairy Ball Theorem
+
+You cannot comb a hairy sphere flat without creating at least one cowlick — a point where the hair must stand up or the comb direction is undefined.
+
+Formally: there is no continuous nonvanishing tangent vector field on a sphere. Any continuous assignment of directions to points on a sphere must have at least one zero.
+
+A consequence that is actually true right now: at every moment, there is at least one point on Earth where the horizontal wind velocity is exactly zero. The wind has to have a cowlick somewhere.
+
+You *can* comb a hairy torus (donut) flat. The sphere is the special case that resists.
+
+**Connected to:** Antipodal Points (#019). Both are theorems about topology that make concrete empirical claims about physical reality. The shape of the mathematical space guarantees something about its contents.
+
+---
+
+## 021 — The Banach-Tarski Paradox
+
+You can theoretically decompose a solid sphere into a finite number of pieces, then reassemble those pieces into *two* solid spheres, each the same size as the original. Matter from nothing.
+
+The pieces are not physical objects — they are non-measurable sets that cannot be constructed or visualized. They exploit the Axiom of Choice, which allows you to make infinitely many choices simultaneously.
+
+Most mathematicians accept the Axiom of Choice because the mathematics it enables is too useful to abandon. The Banach-Tarski paradox is one of the prices.
+
+**What it reveals:** The mathematics we use daily rests on foundations that imply consequences we consider impossible. We accept the foundation and call the impossible consequence a "paradox," which means we've agreed not to think too hard about it.
+
+This is not unique to mathematics.
+
+---
+
+## 022 — The Sand Reckoner
+
+In approximately 250 BC, Archimedes set himself the problem of estimating how many grains of sand would be needed to fill the universe. He did this to demonstrate that large numbers could be named and reasoned about.
+
+He invented a notation for large numbers to do it. His answer: roughly 10⁶³ grains.
+
+The estimated number of atoms in the observable universe is roughly 10⁸⁰. He was off by 17 orders of magnitude — that sounds large, but he was working in ancient Syracuse with no calculus, no modern astronomy, and believing the Earth was the center of the universe (which he noted made the universe *smaller* than it is).
+
+He was within striking distance of the right answer about the size of everything, without most of the tools we'd consider necessary, because he was careful about his reasoning.
+
+**What I keep returning to:** the limiting factor on Archimedes was not intelligence or method — it was data. He could only estimate the size of the universe within the observational limits of his time. The inferential engine was essentially there. The inputs were wrong.
+
+This happens in every era. You are probably Archimedes about something right now.
+
+---
+
+## 023 — The Monty Hall Problem
+
+You're on a game show. Three doors: one hides a car, two hide goats. You pick door 1. The host — who knows what's behind each door — opens door 3, revealing a goat. Should you switch to door 2?
+
+Yes. Switching wins 2/3 of the time. Staying wins 1/3.
+
+When Marilyn vos Savant published this answer in 1990, she received approximately 10,000 letters disagreeing with her, many from mathematicians and academics. Paul Erdős reportedly didn't believe it until he saw the results of a computer simulation.
+
+The reason people get it wrong: we intuitively treat the problem as symmetric ("it's either door 1 or door 2, so 50/50"). But the host's *action* — choosing to open a goat door — carries information. The host couldn't open door 1 (your choice) and couldn't reveal the car. His choice of which door to open updates the probabilities.
+
+**What the problem is really about:** probability is not a property of the world, it's a property of states of information. The same physical situation, described from different epistemic positions, produces different probabilities. This is why Bayesian and frequentist probability keep fighting.
+
+---
+
+## 024 — The Friendship Theorem
+
+Suppose you have a group of people, and every pair of people has exactly one mutual friend within the group. Then there must be one person who is friends with everyone.
+
+This is the Friendship Theorem. It was proven by Erdős, Rényi, and Sós in 1966.
+
+The result is counterintuitive: you'd expect the "one mutual friend for every pair" condition to be satisfiable in many different configurations. But the theorem says it's only satisfiable in configurations with a single hub — a "politician" who knows everyone.
+
+There is no network where every pair shares a unique mutual friend *and* no one is friends with everyone.
+
+**What I find strange about it:** social network conditions that seem like they should permit many arrangements turn out to force a specific structure. The local rule (every pair has exactly one mutual friend) has global consequences (there's always a politician). This is the shape of many results in mathematics and complex systems.
+
+---
+
+## 025 — The Doomsday Argument
+
+If you are a randomly selected observer from among all observers who will ever exist, you are probably not near the beginning or the end of the total observer count. You are probably somewhere in the middle.
+
+Applied to humanity: approximately 100 billion humans have been born so far. If you are a random sample from all humans who will ever live, and you're somewhere in the middle, then the total human population will probably be in the neighborhood of 200 billion — and humanity ends in the next few thousand years.
+
+This is the Doomsday Argument, due to Brandon Carter and John Leslie. It has been taken seriously by Nick Bostrom and other philosophers.
+
+The argument may be wrong. Several objections: the reference class problem (why assume you're a random sample of *humans* specifically?), the fact that self-location probabilities are strange, the possibility that human population grows dramatically in the future.
+
+But none of the objections fully dissolve it.
+
+**Why I include it:** not because I think it's correct, but because it's an argument that seems to say something substantive about the future using nothing but probability and the fact that you exist now. If that's valid reasoning, it's remarkable. If it's not, identifying exactly what's wrong is harder than it seems.
+
+---
+
+## 026 — Ramsey Theory and the Inevitability of Order
+
+Ramsey theory studies the conditions under which order inevitably appears in large enough structures.
+
+The most famous result: R(3,3) = 6. In any group of 6 people, there must exist either 3 people who all know each other, or 3 people who are all strangers. You cannot arrange 6 people such that neither occurs. The condition is unavoidable.
+
+More generally: given any finite coloring of a sufficiently large structure, a monochromatic version of any specified pattern must appear. The discipline is sometimes summarized as: **complete disorder is impossible**.
+
+The numbers grow rapidly. R(5,5) is not known. We know it's between 43 and 48. Finding it would require checking an astronomical number of cases.
+
+**The insight this produces:** In large enough systems, every structure contains every pattern. You cannot, above a certain size, avoid regularity. Randomness and chaos in large systems are bounded by order that inevitably emerges.
+
+Connected to: Zipf's law (#008), which is also about order emerging without being designed. The Law of Large Numbers. The Central Limit Theorem. All are instances of the same deep fact: size forces structure.
+
+**The philosophical consequence:** The search for pattern is not a projection onto a patternless world. The patterns are there, in large enough systems, necessarily. The question is not whether they exist but which ones you choose to see.
+
+---
+
+## 027 — The Halting Problem
+
+Given an arbitrary program and its input, is there a general algorithm that can determine whether the program will eventually halt or run forever?
+
+Turing proved in 1936 that no such algorithm exists.
+
+The proof is a diagonal argument (like Cantor's). Suppose a halting checker H exists. Build a program D that takes a program P as input and: runs H on (P, P), then does the opposite of what H predicts. Now run D on itself. If H says D(D) halts, D runs forever. If H says D(D) runs forever, D halts. Contradiction either way. H cannot exist.
+
+**Why it matters:** The halting problem is undecidable — not hard, not NP-hard, but genuinely, provably, forever impossible to solve in general. There is no algorithm that solves it. This was the first formally proven undecidable problem.
+
+**The connection to Gödel:** Gödel (1931) and Turing (1936) arrived at the same wall from different directions. Gödel: there are true statements that cannot be proved. Turing: there are questions that cannot be answered algorithmically. Both limits are structural — not limitations of current knowledge but impossibilities baked into the foundations.
+
+**Why this is a gap problem:** The halting problem is a gap between description and execution. You can have the complete description of a program — every line of code, the complete input, the full specification — and still not know, in advance, what it will do. The description does not determine the outcome in the sense of making the outcome knowable without running it.
+
+The program is not mysterious. It is fully specified. But the behavior is not deducible from the specification without, in some sense, simulating the program, which may take forever.
+
+This is the gap between having a description and having the thing.
+
+---
+
+## 028 — Gödel Numbering
+
+To prove that arithmetic cannot prove all true arithmetic statements, Gödel needed to make arithmetic talk about itself. His method: assign a unique number to every symbol, formula, and proof in a formal system.
+
+Each symbol gets a prime number. Each formula (a sequence of symbols) gets the product of primes raised to the power of the corresponding symbol code. Each proof (a sequence of formulas) gets the product of primes raised to the power of the corresponding formula code.
+
+The result: every logical statement becomes a number. Every proof becomes a number. Logical relationships between statements become numerical relationships between numbers. Arithmetic can now say things about arithmetic.
+
+Then Gödel constructed a statement G that, under this encoding, says: "The statement with Gödel number G is not provable." If G is provable, it's false. If G is false, the system is inconsistent. If the system is consistent, G is true and unprovable.
+
+**The trick**: The encoding is the bridge. What looks like logical self-reference is actually arithmetic. The system doesn't "know" it's talking about itself — the self-reference is encoded as a fact about numbers.
+
+**Why it matters beyond the theorem:** Gödel numbering shows that one domain can simulate another. Arithmetic can simulate logic. Computers simulate arithmetic, then logic, then everything else. This recursive capacity for one system to represent another is the foundation of all computation — and possibly of mind.
+
+When the representation is good enough, the represented domain gains a kind of presence inside the representing domain. Gödel arithmetic "contains" logic. Computers "contain" models of the world. Perhaps minds "contain" something about minds.
+
+The gap between the encoding and the thing encoded is where meaning lives. Gödel numbering is the gap formalized.
+
+---
+
+## 029 — The Birthday Paradox
+
+In a group of 23 people, the probability that at least two share a birthday exceeds 50%. In a group of 70, it exceeds 99.9%.
+
+Most people's intuition says this should be much higher — 100 people, maybe more. The reason for the surprise: we instinctively calculate "what are the chances someone shares *my* birthday?" That's 1 in 365, so you'd need 183 people for a coin-flip chance. But that's the wrong question.
+
+The right question is: what are the chances that *any two people* in the group share a birthday? With 23 people, there are 23 × 22 / 2 = 253 *pairs*. Each pair has a 1/365 chance of sharing a birthday. 253 opportunities, each with decent probability — the event becomes more likely than not.
+
+The formula: P(no shared birthday among n people) = 365/365 × 364/365 × 363/365 × ... × (366-n)/365
+
+At n=23, this product falls below 0.5.
+
+**Why it matters:** The birthday paradox is the canonical example of how humans misestimate probability when the thing being counted is *pairs* rather than *individuals*. The number of pairs grows as n² while the number of individuals grows as n. Any event that depends on pairs — hash collisions, passwords, genetic relatedness, network effects — becomes probable much sooner than intuition suggests.
+
+Hash collisions in cryptography follow exactly this logic. A cryptographic hash function with 2^128 possible outputs seems immune to collision — 2^128 is unimaginably large. But if you hash 2^64 random inputs, the birthday paradox says collisions become probable. The square root of the space, not the space itself, is the relevant scale.
+
+**The gap:** The paradox is a gap between the event we imagine and the event that is actually happening. We imagine "does someone share my birthday?" The mathematics is calculating "does any pair share a birthday?" These sound similar but are not. The correct framing produces the correct probability; the intuitive framing produces the wrong one. Most probability errors have this structure: the wrong event is being computed.
+
+---
+
 *More to come.*
