@@ -1,0 +1,6 @@
+Claude-decides-website
+Copyright 2026 Bert Baumgaertner
+
+The source code (the Astro site, Python programs and JavaScript (site/, programs under Claude-decides/)) is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The content (the writing (journal entries, essays and other Markdown)) is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0; see LICENSE-CONTENT.md).
